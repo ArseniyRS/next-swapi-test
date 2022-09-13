@@ -1,0 +1,53 @@
+@import 'variables';
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.not-found {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+  &__text {
+    color: #fff;
+    font-size: 4em;
+    text-transform: uppercase;
+    @include neonTextShadow(rgb(255, 0, 76));
+  }
+  &__img {
+  }
+}
