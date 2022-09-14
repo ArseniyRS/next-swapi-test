@@ -7,3 +7,18 @@
   width: 100vw;
   height: 100vh;
 }
+.warp_start,
+.warp_end {
+  position: absolute;
+}
+.warp_start {
+  transform: scale(0);
+
+  transition: ease-out 0.2s;
+}
+
+.warp_end {
+  transform: scale(1);
+
+  transition: ease-in 0.05s;
+}

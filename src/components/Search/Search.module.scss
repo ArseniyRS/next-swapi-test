@@ -38,7 +38,10 @@ $box-shadow: 0 0 0.2rem #58a0ff, 0 0 0.2rem #fff, 0 0 2rem #58a0ff, 0 0 0.8rem #
     max-width: 800px;
     max-height: 180px;
     margin-top: 12px;
+    border-radius: 20px;
     overflow: auto;
+
+    background: black;
     & {
       scrollbar-width: auto;
       scrollbar-color: #49555f #ffffff;

@@ -1,0 +1,14 @@
+html[data-theme='LIGHT'] {
+  --green-shadow: rgb(49, 219, 57);
+  --blue-shadow: rgb(47, 127, 247);
+  --yellow-shadow: rgb(219, 188, 49);
+  --purple-shadow: rgb(199, 49, 219);
+  --orange-shadow: rgb(219, 151, 49);
+}
+html[data-theme='DARK'] {
+  --green-shadow: rgb(255, 0, 76);
+  --blue-shadow: rgb(255, 0, 76);
+  --yellow-shadow: rgb(255, 0, 76);
+  --purple-shadow: rgb(255, 0, 76);
+  --orange-shadow: rgb(255, 0, 76);
+}

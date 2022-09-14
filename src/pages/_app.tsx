@@ -13,13 +13,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <StarsBg isLoading={isLoading} />
       <Header />
-      <div className="container">
-        <PersonVisited>
+      <PersonVisited>
+        <StarsBg isLoading={isLoading}>
           <Component {...pageProps} />
-        </PersonVisited>
-      </div>
+        </StarsBg>
+      </PersonVisited>
     </>
   );
 }

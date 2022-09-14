@@ -1,12 +1,22 @@
+@import 'styles/_variables.scss';
 .person {
   position: absolute;
   top: 50%;
   left: 50%;
 
+  width: 500px;
+
   padding: 30px;
   border-radius: 24px;
 
-  background: #49555f;
+  background: #49555f7e;
 
   transform: translate(-50%, -50%);
+  @include neonBoxShadow(var(--green-shadow));
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

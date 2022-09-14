@@ -1,16 +1,9 @@
 import axios, { AxiosError } from "axios";
 import { useEffect, useState } from "react";
 
-export type Response<T> = {
-  count: number;
-  next: number | null;
-  previous: number | null;
-  results: T;
-};
-
-export function useFetch<T>(url: string): [boolean, string, Response<T> | null] {
+export function useFetch<T>(url: string): [boolean, string, T | null] {
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState<Response<T> | null>(null);
+  const [data, setData] = useState<T | null>(null);
   const [error, setError] = useState("");
   async function makeRequest() {
     try {

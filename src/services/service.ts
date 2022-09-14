@@ -12,3 +12,7 @@ export function getPeopleById(id: number) {
 export function getPeopleBySearch(value: string) {
   return instance.get(`people/?search=${value}`);
 }
+
+export function getByUrl(url: string) {
+  return axios.get(url);
+}

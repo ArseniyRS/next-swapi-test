@@ -5,7 +5,6 @@ import styles from "./Person.module.scss";
 
 const PersonCardList = () => {
   const { visitedPersons } = useContext(PersonVisitedContext);
-  console.log(visitedPersons);
   const renderedVisitedPersons = visitedPersons.map((person) => (
     <PersonCard key={person.name} {...person} />
   ));
