@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### The worse the internet connection, the longer the warp jump.
 ## IT WORKS!!!
-Open [swapi-test](http://157.230.29.55:3000).
+Open [next-swapi-test.vercel.app](https://next-swapi-test.vercel.app/).
 ## Getting Started
 
 First, run the development server:
