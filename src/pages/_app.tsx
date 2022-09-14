@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import type { AppProps } from "next/app";
-import "styles/globals.scss";
-import StarsBg from "layout/StarsBg/StarsBg";
-import PersonVisited from "HOC/PersonVisited";
-import Header from "layout/Header/Header";
+import "~/styles/globals.scss";
+import StarsBg from "~/layout/starsBg/StarsBg";
+import Header from "~/layout/header/Header";
+import PersonVisited from "~/HOC/PersonVisited";
+
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = React.useState(true);
 

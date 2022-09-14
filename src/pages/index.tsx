@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import PersonCardList from "components/Person/PersonCardList";
+import PersonCardList from "~/components/person/PersonCardList";
 
 const Home: NextPage = () => {
   return (

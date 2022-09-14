@@ -1,5 +1,5 @@
-import { Person } from "interfaces/person.interface";
 import React, { createContext, PropsWithChildren, useEffect, useMemo, useState } from "react";
+import { Person } from "~/interfaces/person.interface";
 
 export const PersonVisitedContext = createContext<{
   visitedPersons: Person[];

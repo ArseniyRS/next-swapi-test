@@ -1,9 +1,9 @@
-import { Person } from "interfaces/person.interface";
 import { useRouter } from "next/router";
 import React from "react";
-import { getIdFromUrl } from "utils/getIdFromUrl";
+import { Person } from "~/interfaces/person.interface";
+import { getIdFromUrl } from "~/utils/getIdFromUrl";
 import styles from "./Person.module.scss";
-import PersonProp from "./PersonProp/PersonRow";
+import PersonProp from "./personProp/PersonRow";
 
 const PersonCard = (data: Person) => {
   const router = useRouter();

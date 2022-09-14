@@ -1,7 +1,7 @@
-import { Person } from "interfaces/person.interface";
 import Link from "next/link";
 import React from "react";
-import { getIdFromUrl } from "utils/getIdFromUrl";
+import { Person } from "~/interfaces/person.interface";
+import { getIdFromUrl } from "~/utils/getIdFromUrl";
 import styles from "./Search.module.scss";
 
 function SearchSuggestions({ people }: { people: Person[] }) {

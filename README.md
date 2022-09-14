@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+### The worse the internet connection, the longer the warp jump.
+## IT WORKS!!!
+Open [swapi-test](http://157.230.29.55:3000).
 ## Getting Started
 
 First, run the development server:
@@ -24,4 +27,3 @@ npm run stylelint # npm run stylelint:scss
 # or
 yarn stylelint # yarn stylelint:scss
 ```
-## Deploy on Vercel

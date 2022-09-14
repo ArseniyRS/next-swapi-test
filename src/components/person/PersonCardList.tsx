@@ -1,7 +1,7 @@
-import { PersonVisitedContext } from "HOC/PersonVisited";
 import React, { useContext } from "react";
-import PersonCard from "./PersonCard";
 import styles from "./Person.module.scss";
+import { PersonVisitedContext } from "~/HOC/PersonVisited";
+import PersonCard from "./PersonCard";
 
 const PersonCardList = () => {
   const { visitedPersons } = useContext(PersonVisitedContext);

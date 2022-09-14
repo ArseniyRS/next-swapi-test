@@ -1,5 +1,5 @@
 import React from "react";
-import { isLink } from "utils/isLink";
+import { isLink } from "~/utils/isLink";
 import styles from "../Person.module.scss";
 import PersonProp from "./PersonProp";
 

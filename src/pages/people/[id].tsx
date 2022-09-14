@@ -1,12 +1,12 @@
 import { GetServerSideProps } from "next";
 import React, { useContext, useEffect } from "react";
-import { getPeopleById } from "../../services/service";
 import Head from "next/head";
-import PersonProp from "components/Person/PersonProp/PersonRow";
 import styles from "./PersonPage.module.scss";
-import { PersonVisitedContext } from "HOC/PersonVisited";
-import { Person } from "interfaces/person.interface";
 import type { NextPage } from "next";
+import { Person } from "~/interfaces/person.interface";
+import { PersonVisitedContext } from "~/HOC/PersonVisited";
+import { getPeopleById } from "~/services/service";
+import PersonRow from "~/components/person/personProp/PersonRow";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { id }: any = context.params;
@@ -15,22 +15,29 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       notFound: true,
     };
   }
-  const response = await getPeopleById(+id);
-  if (!response.data) {
+  try {
+    const response = await getPeopleById(+id);
+    if (!response.data) {
+      return {
+        notFound: true,
+      };
+    }
     return {
+      props: response.data,
+    };
+  } catch {
+    return {
+      props: {},
       notFound: true,
     };
   }
-  return {
-    props: response.data,
-  };
 };
 
 const PersonPage: NextPage<Person> = (props: Person) => {
   const { handlePersonVisited } = useContext(PersonVisitedContext);
   const { url, created, edited, ...otherProps } = props;
   const renderMainInfo = Object.entries(otherProps).map(([propLable, propValue]) => (
-    <PersonProp key={propLable} label={propLable} value={propValue} />
+    <PersonRow key={propLable} label={propLable} value={propValue} />
   ));
   useEffect(() => {
     handlePersonVisited(props);

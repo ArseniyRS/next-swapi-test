@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "../Person.module.scss";
 import PersonPropTooltip from "./PersonPropTooltip";
+import styles from "../Person.module.scss";
 
 const PersonProp = ({ value, isLink }: { value: string; isLink: boolean }) => {
   const [show, setShow] = useState(false);

@@ -1,12 +1,12 @@
-import { useDebounce } from "hooks/useDebounce";
 import React, { useEffect, useState } from "react";
 import SearchSuggestions from "./SearchSuggestions";
 import styles from "./Search.module.scss";
-import { getPeopleBySearch, getByUrl } from "services/service";
+import { getPeopleBySearch, getByUrl } from "~/services/service";
 import OutsideClickHandler from "react-outside-click-handler";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { Person } from "interfaces/person.interface";
-import { Response } from "interfaces/response.interface";
+import { Person } from "~/interfaces/person.interface";
+import { Response } from "~/interfaces/response.interface";
+import { useDebounce } from "~/hooks/useDebounce";
 
 const Search = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -60,7 +60,7 @@ const Search = () => {
             dataLength={suggestions.results.length}
             next={handleScroll}
             hasMore={suggestions.results.length < suggestions.count}
-            loader={<h4>Loading...</h4>}
+            loader={<h4 style={{ color: "#fff" }}>Loading...</h4>}
           >
             <SearchSuggestions people={suggestions.results} />
           </InfiniteScroll>
