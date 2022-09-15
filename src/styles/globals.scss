@@ -1,6 +1,26 @@
 @import 'variables';
 @import 'colors';
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #49555f #ffffff;
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
+  ::-webkit-scrollbar-track {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: none;
+    border-radius: 10px;
+
+    background-color: #3a434b;
+  }
+}
 html {
   font-size: calc(100vw / 1920 * 10);
   @media (max-width: 1024px) {

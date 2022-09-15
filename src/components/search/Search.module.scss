@@ -44,27 +44,6 @@
     overflow: auto;
 
     background: black;
-    & {
-      scrollbar-width: auto;
-      scrollbar-color: #49555f #ffffff;
-    }
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    &::-webkit-scrollbar-track {
-      margin-top: 15px;
-      margin-bottom: 15px;
-
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border: none;
-      border-radius: 10px;
-
-      background-color: #3a434b;
-    }
   }
   &__option {
     display: flex;

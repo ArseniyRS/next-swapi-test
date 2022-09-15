@@ -6,6 +6,9 @@
   margin: 4px 0;
 
   column-gap: 16px;
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .label,
 .value {
@@ -56,10 +59,11 @@
   max-height: 180px;
   padding: 12px;
   border-radius: 16px;
+  overflow-y: scroll;
 
-  background: #49555f7e;
-  row-gap: 4px;
+  background: transparent;
   cursor: pointer;
+  row-gap: 4px;
   @include neonBoxShadow(var(--orange-shadow));
   &__list {
     position: relative;
