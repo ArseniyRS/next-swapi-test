@@ -53,7 +53,7 @@ const Search = () => {
           onChange={handleSearchChange}
           placeholder={isLoading ? "Loading..." : "Search by name"}
         />
-        {showSuggestions && suggestions && suggestions.results.length && (
+        {!!(showSuggestions && suggestions && suggestions.results.length) && (
           <InfiniteScroll
             className={styles.search__suggestions}
             height={400}

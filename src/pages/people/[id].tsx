@@ -35,7 +35,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 const PersonPage: NextPage<Person> = (props: Person) => {
   const { handlePersonVisited } = useContext(PersonVisitedContext);
-  const { url, created, edited, ...otherProps } = props;
+  const { url, created, edited, ...otherProps } = props; //person
   const renderMainInfo = Object.entries(otherProps).map(([propLable, propValue]) => (
     <PersonRow key={propLable} label={propLable} value={propValue} />
   ));

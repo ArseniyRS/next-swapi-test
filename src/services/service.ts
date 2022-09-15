@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const instance = axios.create({
   baseURL: "https://swapi.dev/api/",
-  timeout: 10000,
+  timeout: 60000,
 });
 
 export function getPeopleById(id: number) {

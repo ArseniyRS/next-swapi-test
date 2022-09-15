@@ -9,7 +9,7 @@ const PersonCardList = () => {
     <PersonCard key={person.name} {...person} />
   ));
   return (
-    <div>
+    <>
       <h2 className={styles.card__list_title}>viewed characters:</h2>
       <div className={styles.card__list}>
         {visitedPersons.length ? (
@@ -18,7 +18,7 @@ const PersonCardList = () => {
           <h4 className={styles.card__list_empty}>Empty</h4>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

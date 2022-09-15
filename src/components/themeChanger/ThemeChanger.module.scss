@@ -1,17 +1,28 @@
 @import '../../styles/variables';
 .theme {
+  position: absolute;
+  right: -10rem;
+
   display: flex;
-  align-items: center;
-  justify-self: flex-start;
+  align-items: flex-end;
+  @media (max-width: 1000px) {
+    position: static;
+  }
   span {
     color: rgb(133, 133, 133);
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    text-align: end;
     text-transform: uppercase;
   }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
   button {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin-left: 12px;
     border: none;
     border-radius: 4px;

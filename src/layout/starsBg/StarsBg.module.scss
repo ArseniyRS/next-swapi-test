@@ -10,6 +10,9 @@
 .warp_start,
 .warp_end {
   position: absolute;
+
+  width: 100%;
+  height: 100%;
 }
 .warp_start {
   transform: scale(0);
