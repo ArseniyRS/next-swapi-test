@@ -8,7 +8,7 @@ const StarsBg = ({ isLoading, children }: PropsWithChildren<{ isLoading: boolean
   const [isWarp, setIsWarp] = useState(false);
   const [stars, setStars] = useState<any>();
   const [starsCtx, setStarsCtx] = useState<any>();
-  let starsParams = { speed: isWarp ? 100 : 5, number: 300, extinction: 2 };
+  let starsParams = { speed: 5, number: 200, extinction: 2 };
   useEffect(() => {
     const handleStart = () => setIsWarp(true);
     const handleComplete = () => setIsWarp(false);
@@ -23,13 +23,21 @@ const StarsBg = ({ isLoading, children }: PropsWithChildren<{ isLoading: boolean
       router.events.off("routeChangeError", handleComplete);
     };
   });
+  const getStarsSpeedByResolution = () => {
+    const defaultSpeed = (starsParams.speed * window.innerWidth) / 1200;
+    if (isWarp) {
+      return defaultSpeed * 17;
+    }
+    return defaultSpeed;
+  };
+  const getStarsNumberByResolution = () => (starsParams.number * window.innerWidth) / 1200;
 
   const startBg = () => {
     const { starsCanvas, starsElements } = setupStars(
       stars,
       starsCtx,
-      starsParams.number,
-      starsParams.speed,
+      getStarsNumberByResolution(),
+      getStarsSpeedByResolution(),
       starsParams.extinction,
     );
     updateStars(starsCtx, starsCanvas.width, starsCanvas.height, starsElements);
